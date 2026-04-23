@@ -1,0 +1,1 @@
+const url = 'http://localhost:3501/?url=' + encodeURIComponent('https://www.therundown.ai/p/what-happens-when-ai-runs-a-retail-store'); fetch(url).then(r => r.text()).then(html => { const match = html.match(/<meta\s+property=[\"']og:image[\"']\s+content=[\"']([^\"']+)[\"']/i); console.log(match ? match[1] : 'No OG Image'); });
